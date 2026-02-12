@@ -1,0 +1,24 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    Integer contador = 0;
+    Boolean resultado = false;
+
+    if(passedExam == true) {
+        contador++;
+    }
+    
+    if(passedAssignments == true) {
+        contador++;
+    }
+    
+    if(passedProject == true) {
+        contador++;
+    }
+    
+    if(contador >= 2) {
+        resultado = true;
+        return resultado;
+    } else {
+        return resultado;
+    }
+
+}
