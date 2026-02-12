@@ -1,0 +1,13 @@
+public Boolean isEndWithZero(Integer num){
+    String numeroConvertido = num.format();
+    Boolean resultado = false;
+    
+    if(numeroConvertido.substring(numeroConvertido.length() - 1) == '0') {
+        resultado = true;
+       
+    } 
+
+    return resultado;
+
+    
+}
