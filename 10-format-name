@@ -1,16 +1,15 @@
 public String formatName(String firstName, String lastName) {
     String resultado = '';
     
-    if(firstName.length() > 0) {
-        if(lastName.length() > 0) {
-            resultado = lastName + ', ' + firstName;
-        } else {
-            resultado = firstName;
-        }
-    }
-    if(lastName.length() > 0) {
-        resultado = lastName;
-    }
+   if(firstName.length() > 0 && lastName.length() > 0) {
+       resultado = lastName + ', ' + firstName;
+   }
+   else if(firstName.length() > 0) {
+       resultado = firstName;
+   }
+   else if(lastName.length() > 0) {
+       resultado = lastName;
+   }
 
     return resultado;
 }
