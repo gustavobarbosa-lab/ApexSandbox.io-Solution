@@ -1,1 +1,16 @@
+public Boolean ascendingOrder(Integer a, Integer b, Integer c) {
+    Boolean result = true;
 
+    if(b >= a) {
+        if(c >= b) {
+            return result;
+        }
+        else {
+            result = false;
+            return result;
+        }
+    } else {
+        result = false;
+        return result;
+    }
+}
