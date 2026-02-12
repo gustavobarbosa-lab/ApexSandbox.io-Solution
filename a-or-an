@@ -1,0 +1,11 @@
+public String aOrAn(String word) {
+    String firstChar = word.substring(0, 1).toLowerCase();
+    String vogais = 'aeiou';
+
+    for(Integer i = 0; i < vogais.length(); i++) {
+        if(firstChar == vogais.substring(i, i+1)) {
+            return 'an ' + word;
+        }
+    }
+    return 'a ' + word;
+}
