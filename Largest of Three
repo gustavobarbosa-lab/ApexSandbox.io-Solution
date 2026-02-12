@@ -1,0 +1,29 @@
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+    Integer maiorNumero = 0;
+    Boolean numerosNegativos = false;
+    List<Integer> numeros = new List<Integer>{num1, num2, num3};
+
+    for(Integer numero : numeros) {
+        if(numero < 0) {
+            numerosNegativos = true;
+        }
+        else if(numero > maiorNumero) {
+            numerosNegativos = false;
+            maiorNumero = numero;
+        }
+    }
+
+    if(numerosNegativos) {
+        maiorNumero = -1;
+        
+        for(Integer numero : numeros) {
+            if(numero > maiorNumero) {
+                maiorNumero = numero;
+            }
+        }
+
+        return maiorNumero;
+    }
+
+    return maiorNumero;
+}
