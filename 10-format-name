@@ -11,4 +11,6 @@ public String formatName(String firstName, String lastName) {
     if(lastName.length() > 0) {
         resultado = lastName;
     }
+
+    return resultado;
 }
