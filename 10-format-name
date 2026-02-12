@@ -7,7 +7,7 @@ public String formatName(String firstName, String lastName) {
    else if(firstName.length() > 0 || firstName == null) {
        resultado = firstName;
    }
-   else if(lastName.length() > 0 && lastName != null) {
+   else if(lastName.length() > 0 || lastName == null) {
        resultado = lastName;
    }
 
