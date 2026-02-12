@@ -1,0 +1,16 @@
+public String whichTwo(Integer a, Integer b, Integer c) {
+    String resultado = '';
+    Integer soma;
+
+    if((a + b) == c) {
+        resultado = 'c';
+    }
+    else if((a + c) == b) {
+        resultado = 'b';
+    }
+    else if((c + b) == a) {
+        resultado = 'a';
+    }
+
+    return resultado;
+}
