@@ -1,0 +1,31 @@
+public String changeTimeFormat(String strTime) {
+    String periodo = '';
+	List<String> horasPartidas = strTime.split(':');
+    String hora = horasPartidas[0];
+    String minutos = horasPartidas[1];
+    
+    Integer horaConvertida = Integer.valueOf(hora);
+    
+    if(horaConvertida < 12) {
+        periodo = 'AM';
+    } else {
+        periodo = 'PM';
+    }
+    
+    Integer horaAM = Math.mod(horaConvertida, 12);
+	
+    if(horaAM == 0) {
+        horaAM = 12;
+    }
+    
+    String horaFormatada = String.valueOf(horaAM).leftPad(2, '0');
+    
+    horaFormatada += ':' + minutos + ' ' + periodo;
+    
+    return horaFormatada;
+}
+
+
+
+
+    
