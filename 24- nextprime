@@ -1,0 +1,23 @@
+ Integer numero = num + 1;
+
+    while(true) {
+        if( numero > 1) {
+            Boolean numeroPrimo = true;
+
+            for(Integer i = 2; i < numero - 1; i++) {
+                if((Math.mod(numero, i)) == 0) {
+                    numeroPrimo = false;
+                    break;
+                } 
+            }
+            if(numeroPrimo) {
+                return numero;
+            }
+            numero++;
+        }
+        else {
+            numero++;
+        }
+    }
+    
+    return numero;
