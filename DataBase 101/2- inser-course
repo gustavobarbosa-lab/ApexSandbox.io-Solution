@@ -1,0 +1,17 @@
+public Id insertCourse(String name, String details, Integer credits) {
+    List<apxio__Course__c> dados = new List<apxio__Course__c>();
+
+    if(credits < 1 || credits > 4) {
+        return null;
+    }
+
+    apxio__Course__c dado = new apxio__Course__c(
+        name = name,
+        apxio__Course_Details__c = details
+    );
+
+    dados.add(dado);
+    insert dados;
+
+    return dado.id;
+}
