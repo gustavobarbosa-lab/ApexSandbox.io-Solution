@@ -10,9 +10,8 @@ public Boolean companionPlants(List<String> plants) {
     };
 
    for(Integer i = 0; i < plants.size(); i++) {
-       if(i == (plants.size() - 1)) {
-           index = 0;
-       }
+        Integer nextIndex = (i + 1) % plants.size();
+        String combinacao = plants[i] + plants[nextIndex];
 
        combinacao = plants[i] + plants[i + index];
 
