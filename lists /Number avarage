@@ -1,0 +1,14 @@
+public Decimal average(List<Decimal> numbers){
+    Decimal soma = 0;
+    Decimal resultado = 0;
+
+    for(Decimal numero : numbers) {
+        soma += numero;
+    }
+
+    soma = soma / numbers.size();
+
+    resultado = soma.setscale(2);
+
+    return resultado;
+}
