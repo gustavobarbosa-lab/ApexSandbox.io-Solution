@@ -1,25 +1,25 @@
 public Boolean companionPlants(List<String> plants) {
-   Integer index = 1;
-   String combinacao = '';
-    List<String> combinacoes = new List<String>{
-        'lettucecucumbers',
-        'lettuceonions',
-        'onionscarrots',
-        'onionstomatoes',
-        'tomatoesonions'        
+
+    Set<Set<String>> combinacoes = new Set<Set<String>>{
+        new Set<String>{'lettuce','cucumbers'},
+        new Set<String>{'lettuce','onions'},
+        new Set<String>{'onions','carrots'},
+        new Set<String>{'onions','tomatoes'}
     };
 
-   for(Integer i = 0; i < plants.size(); i++) {
-       if(i == (plants.size() - 1)) {
-           index = 0;
-       }
+    for(Integer i = 0; i < plants.size(); i++) {
+        
+        Integer nextIndex = (i + 1) % plants.size();
+        
+        Set<String> par = new Set<String>{
+            plants[i],
+            plants[nextIndex]
+        };
 
-       combinacao = plants[i] + plants[i + index];
+        if(!combinacoes.contains(par)) {
+            return false;
+        }
+    }
 
-       if(!combinacoes.contains(combinacao)) {
-           return false;
-       }
-   }
-
-   return true;
+    return true;
 }
