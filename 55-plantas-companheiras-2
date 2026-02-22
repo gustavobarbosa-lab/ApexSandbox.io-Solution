@@ -1,3 +1,27 @@
 public Boolean companionPlants(List<String> plants) {
-    //code here
+   Integer index = 1;
+   Sting combinacao = '';
+    List<String> combinacoes = new List<String>(
+        'lettucecucumbers',
+        'lettuceonions',
+        'onionscarrots',
+        'onionstomatoes'
+    );
+
+   for(Integer i = 0; i < plants.size() i++) {
+       if(i == plants.size() - 1) {
+           index = 0;
+       }
+
+       combinacao = plants[i] + plants[i + index];
+
+       if(!combinacoes.contains(combinacao)) {
+           return false;
+       }
+   }
+
+   return true;
+
+   
+
 }
