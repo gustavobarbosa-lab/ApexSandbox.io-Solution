@@ -13,6 +13,10 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
 
             sequenciaAtual = 0;
         }
+
+        if(sequenciaAtual > maiorSequencia) {
+            maiorSequencia = sequenciaAtual;
+        }
     }
 
     return maiorSequencia;
