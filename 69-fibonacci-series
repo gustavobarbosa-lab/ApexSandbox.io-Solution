@@ -1,0 +1,20 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    Integer atual = 1;
+    Integer anterior = 1;
+
+    List<Integer> fibonacci = new List<Integer>{1, 1};
+
+    for(Integer i = 2; i < n; i++) {
+        Integer resultado = atual + anterior
+
+        fibonacci.add(resultado);
+
+
+        atual = anterior;
+        anterior = resultado;
+    }
+
+    return fibonacci;
+    
+
+}
