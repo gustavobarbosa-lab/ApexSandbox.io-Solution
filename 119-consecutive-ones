@@ -1,0 +1,20 @@
+public Integer maxConsecutiveOnes(Integer[] numbers) {
+    Integer maiorSequencia = 0;
+    Integer sequenciaAtual = 0;
+
+    for(Integer numero : numbers) {
+        if(numero == 1) {
+            sequenciaAtual++;
+        }
+        else {
+            if(sequenciaAtual > maiorSequencia) {
+                maiorSequencia = sequenciaAtual;
+            }
+
+            sequenciaAtual = 0;
+        }
+    }
+
+    return maiorSequencia;
+
+}
