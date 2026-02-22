@@ -1,12 +1,12 @@
 public Boolean companionPlants(List<String> plants) {
    Integer index = 1;
    String combinacao = '';
-    List<String> combinacoes = new List<String>(
+    List<String> combinacoes = new List<String>{
         'lettucecucumbers',
         'lettuceonions',
         'onionscarrots',
         'onionstomatoes'
-    );
+    };
 
    for(Integer i = 0; i < plants.size(); i++) {
        if(i == (plants.size() - 1)) {
