@@ -1,4 +1,6 @@
 public Boolean companionPlants(List<String> plants) {
+   Integer index = 1;
+   String combinacao = '';
     List<String> combinacoes = new List<String>{
         'lettucecucumbers',
         'lettuceonions',
@@ -8,9 +10,11 @@ public Boolean companionPlants(List<String> plants) {
     };
 
    for(Integer i = 0; i < plants.size(); i++) {
-       
-        Integer nextIndex = (i + 1) % plants.size();
-        String combinacao = plants[i] + plants[nextIndex];
+       if(i == (plants.size() - 1)) {
+           index = 0;
+       }
+
+       combinacao = plants[i] + plants[i + index];
 
        if(!combinacoes.contains(combinacao)) {
            return false;
