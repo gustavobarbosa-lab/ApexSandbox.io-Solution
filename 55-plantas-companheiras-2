@@ -5,7 +5,8 @@ public Boolean companionPlants(List<String> plants) {
         'lettucecucumbers',
         'lettuceonions',
         'onionscarrots',
-        'onionstomatoes'
+        'onionstomatoes',
+        'tomatoesonions'        
     };
 
    for(Integer i = 0; i < plants.size(); i++) {
