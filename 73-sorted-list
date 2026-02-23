@@ -1,39 +1,32 @@
 public boolean isSorted(List<Integer> numbers) {
-   public boolean isSorted(List<Integer> numbers) {
+    Boolean resultado = false;
+    Integer numeroAnterior = 0;
 
     if(numbers.isEmpty() || numbers.size() == 1) {
         return true;
     }
 
-    Integer index = 1;
-
-    // Pula iguais no começo
-    while(index < numbers.size() && numbers[index] == numbers[index - 1]) {
-        index++;
-    }
-
-    // Se todos forem iguais
-    if(index == numbers.size()) {
-        return true;
-    }
-
-    Boolean descending = numbers[index - 1] > numbers[index];
-
-    for(Integer i = index; i < numbers.size() - 1; i++) {
-
-        if(descending) {
-            if(numbers[i] < numbers[i + 1]) {
-                return false;
-            }
-        } else {
-            if(numbers[i] > numbers[i + 1]) {
+    if(numbers[0] > numbers[1]) {
+        for(Integer i = 0; i < numbers.size() - 1; i++) {
+            if(numbers[i] >= numbers[i + 1]) {
+                resultado = true;
+            } else {
                 return false;
             }
         }
     }
 
-    return true;
-}
     
+   
+    if(numbers[0] < numbers[1]) {
+        for(Integer i = 0; i < numbers.size() - 1; i++) {
+            if(numbers[i + 1] > numbers[i]) {
+                resultado = true;
+            } else {
+                return false;
+            }
+        }
+    }
     
+    return resultado;
 }
