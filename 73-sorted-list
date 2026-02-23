@@ -6,7 +6,7 @@ public boolean isSorted(List<Integer> numbers) {
         return true;
     }
 
-    if(numbers[0] >= numbers[1]) {
+    if(numbers[0] >= numbers[1] && numbers[1] >= numbers[2]) {
         for(Integer i = 0; i < numbers.size() - 1; i++) {
             if(numbers[i] >= numbers[i + 1]) {
                 resultado = true;
