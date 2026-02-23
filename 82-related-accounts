@@ -1,7 +1,6 @@
 public Set<Id> accountIds(List<Opportunity> opps) {
-    if(opps.isSet == '') {
-        return new Set<Id>();
-    }
+  
+    
 
     Set<Id> ids = new Set<Id>();
 
