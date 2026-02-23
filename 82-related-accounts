@@ -1,5 +1,5 @@
 public Set<Id> accountIds(List<Opportunity> opps) {
-    if(opps == null)) {
+    if(opps == null) {
         return new Set<Id>();
     }
 
