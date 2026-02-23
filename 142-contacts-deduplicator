@@ -9,4 +9,6 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
             } 
         }
     }
+
+    return resultado;
 }
