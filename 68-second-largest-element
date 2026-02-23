@@ -1,5 +1,5 @@
 public Integer secondLargest(List<Integer> numbers) {
-    Integer maiorNumero = 0;
+    Integer maiorNumero = -1;
     Integer index = 0;
     
     for(Integer i = 0; i < numbers.size(); i++) {
