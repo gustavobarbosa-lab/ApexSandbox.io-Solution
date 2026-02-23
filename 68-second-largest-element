@@ -1,0 +1,23 @@
+public Integer secondLargest(List<Integer> numbers) {
+    Integer maiorNumero = 0;
+    Integer index = 0;
+    
+    for(Integer i = 0; i < numbers.size(); i++) {
+        if(numbers[i] > maiorNumero) {
+            maiorNumero = numero;
+            index = i;
+        }
+    }
+
+    numbers.remove(i);
+
+    for(Integer i = 0; i < numbers.size(); i++) {
+        if(numbers[i] > maiorNumero) {
+            maiorNumero = numero;
+        }
+    }
+
+    return maiorNumero;
+
+
+}
