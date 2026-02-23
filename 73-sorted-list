@@ -3,22 +3,33 @@ public boolean isSorted(List<Integer> numbers) {
         return true;
     }
 
-    Boolean ascending = true;
-    Boolean descending = true;
+    Integer i = 1;
 
-    for(Integer i = 1; i < numbers.size(); i++) {
+    // Pular números iguais no começo
+    while(i < numbers.size() && numbers[i] == numbers[i - 1]) {
+        i++;
+    }
 
-        if(numbers[i] < numbers[i - 1]) {
-            ascending = false;
+    // Se todos forem iguais
+    if(i == numbers.size()) {
+        return true;
+    }
+
+    Boolean ascending = numbers[i] > numbers[i - 1];
+
+    for(; i < numbers.size(); i++) {
+
+        if(ascending && numbers[i] < numbers[i - 1]) {
+            return false;
         }
 
-        if(numbers[i] > numbers[i - 1]) {
-            descending = false;
+        if(!ascending && numbers[i] > numbers[i - 1]) {
+            return false;
         }
     }
 
-    return ascending || descending;
-}
+    return true;
+
 }
   
     
