@@ -1,38 +1,31 @@
 public boolean isSorted(List<Integer> numbers) {
-
     if(numbers.isEmpty() || numbers.size() == 1) {
         return true;
     }
     
-    // Encontrar a direção baseado no primeiro par diferente
-    Integer direcao = 0; // 0 = indefinido, 1 = crescente, -1 = decrescente
+    Integer direcao = 0; 
     
     for(Integer i = 0; i < numbers.size() - 1; i++) {
         if(numbers[i] < numbers[i + 1]) {
-            direcao = 1; // crescente
+            direcao = 1;
             break;
         } else if(numbers[i] > numbers[i + 1]) {
-            direcao = -1; // decrescente
+            direcao = -1;
             break;
         }
-        // se for igual, continua procurando
     }
     
-    // Se todos elementos são iguais
     if(direcao == 0) {
         return true;
     }
     
-    // Verificar se a lista segue a direção encontrada
     if(direcao == 1) {
-        // Verificar se é crescente (ou igual)
         for(Integer i = 0; i < numbers.size() - 1; i++) {
             if(numbers[i] > numbers[i + 1]) {
                 return false;
             }
         }
     } else {
-        // Verificar se é decrescente (ou igual)
         for(Integer i = 0; i < numbers.size() - 1; i++) {
             if(numbers[i] < numbers[i + 1]) {
                 return false;
