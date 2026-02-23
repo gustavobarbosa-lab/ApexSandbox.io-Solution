@@ -10,10 +10,10 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     }
     
     for(Contact contato : contacts) {
-        if(contato.email = '') {
+        if(contato.email == '') {
             resultado.add(contato);
         }
-        if(contato.email != null) {
+        else if(contato.email != null) {
             if(!emails.contains(contato.email.toLowerCase())) {
                 emails.add(contato.email.toLowerCase());
                 resultado.add(contato);
