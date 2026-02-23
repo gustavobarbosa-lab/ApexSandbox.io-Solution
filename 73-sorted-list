@@ -16,17 +16,17 @@ public boolean isSorted(List<Integer> numbers) {
         }
     }
 
-    for(Integer j = 0; j < 2; j++) {
-        if(numbers[0] < numbers[1]) {
-            for(Integer i = 0; i < numbers.size() - 1; i++) {
-                if(numbers[i + 1] > numbers[i]) {
-                    resultado = true;
-                } else {
-                    return false;
-                }
+    
+    if(numbers[0] < numbers[1]) {
+        for(Integer i = 0; i < numbers.size() - 1; i++) {
+            if(numbers[i + 1] > numbers[i]) {
+                resultado = true;
+            } else {
+                return false;
             }
         }
     }
+    
    
 
     return resultado;
