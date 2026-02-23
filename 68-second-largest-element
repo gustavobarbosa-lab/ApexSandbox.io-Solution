@@ -1,24 +1,31 @@
 public Integer secondLargest(List<Integer> numbers) {
-    Integer maiorNumero = -1;
+    Integer maiorNumero;
     Integer index = 0;
     
-    for(Integer i = 0; i < numbers.size(); i++) {
+    // Encontrar o maior número (inicializando com o primeiro elemento)
+    maiorNumero = numbers[0];
+    for(Integer i = 1; i < numbers.size(); i++) {
         if(numbers[i] > maiorNumero) {
             maiorNumero = numbers[i];
             index = i;
         }
     }
 
-    numbers.remove(index);
-    maiorNumero = 0;
-
+    // Criar uma nova lista sem o maior número
+    List<Integer> numerosSemOMaior = new List<Integer>();
     for(Integer i = 0; i < numbers.size(); i++) {
-        if(numbers[i] > maiorNumero) {
-            maiorNumero = numbers[i];
+        if(i != index) {
+            numerosSemOMaior.add(numbers[i]);
         }
     }
 
-    return maiorNumero;
+    // Encontrar o maior da nova lista (que será o segundo maior da original)
+    Integer segundoMaior = numerosSemOMaior[0];
+    for(Integer i = 1; i < numerosSemOMaior.size(); i++) {
+        if(numerosSemOMaior[i] > segundoMaior) {
+            segundoMaior = numerosSemOMaior[i];
+        }
+    }
 
-
+    return segundoMaior;
 }
