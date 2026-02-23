@@ -1,5 +1,5 @@
 public Boolean containsDuplicates(List<Integer> nums) {
-    new Set<Integer> resultado = new Set<Integer>();
+    Set<Integer> resultado = new Set<Integer>();
 
     resultado.addAll(nums);
 
