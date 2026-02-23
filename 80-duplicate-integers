@@ -4,9 +4,9 @@ public Boolean containsDuplicates(List<Integer> nums) {
     resultado.addAll(nums);
 
     if(resultado.size() < nums.size()) {
-        return false;
+        return true;
     } 
     else {
-        return true;
+        return false;
     }
 }
