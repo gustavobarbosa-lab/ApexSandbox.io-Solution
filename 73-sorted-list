@@ -1,37 +1,36 @@
 public boolean isSorted(List<Integer> numbers) {
-    if(numbers.size() <= 1) {
+    Boolean resultado = false;
+    Integer numeroAnterior = 0;
+
+    if(numbers.isEmpty() || numbers.size() == 1) {
         return true;
     }
 
-    Integer i = 1;
-
-    // Pular números iguais no começo
-    while(i < numbers.size() && numbers[i] == numbers[i - 1]) {
-        i++;
-    }
-
-    // Se todos forem iguais
-    if(i == numbers.size()) {
-        return true;
-    }
-
-    Boolean ascending = numbers[i] > numbers[i - 1];
-
-    for(; i < numbers.size(); i++) {
-
-        if(ascending && numbers[i] < numbers[i - 1]) {
-            return false;
-        }
-
-        if(!ascending && numbers[i] > numbers[i - 1]) {
-            return false;
+    if(numbers[0] >= numbers[1]) {
+        for(Integer i = 0; i < numbers.size() - 1; i++) {
+            if(numbers[i] >= numbers[i + 1]) {
+                resultado = true;
+            } else {
+                return false;
+            }
         }
     }
 
-    return true;
+    
+    
+    if(numbers[0] < numbers[1]) {
+        for(Integer i = 0; i < numbers.size() - 1; i++) {
+            if(numbers[i + 1] > numbers[i]) {
+                resultado = true;
+            } else {
+                return false;
+            }
+        }
+    }
+    
+   
 
-}
-  
+    return resultado;
     
     
 }
