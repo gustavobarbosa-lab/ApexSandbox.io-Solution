@@ -13,7 +13,7 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
 
            atual = (atual == null ? 0 : atual);
 
-           resultado.put(conta.Industry, atual + Revenue);
+           resultado.put(conta.Industry, atual + conta.Revenue);
         }
     }
 
