@@ -1,0 +1,19 @@
+public List<String> orgNames(List<String> adjectives, List<String> animals) {
+    if(adjectives == null || adjectives.isEmpty()) {
+        return new List<String>();
+    }
+
+    if(animals == null || animals.isEmpty()) {
+        return new List<String>();
+    }
+
+    List<String> orgCombinacoes = new List<String>();
+
+    for(Integer i = 0; i < adjectives.size(); i++) {
+        for(Integer j = 0; j < animals.size(); j++) {
+            orgCombinacoes.add(adjectives[i] + '-' + animals[j]);
+        }
+    }
+
+    return orgCombinacoes;
+}
