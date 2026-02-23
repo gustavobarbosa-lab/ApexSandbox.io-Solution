@@ -1,35 +1,25 @@
 public boolean isSorted(List<Integer> numbers) {
-    Boolean resultado = false;
-    Integer numeroAnterior = 0;
-
-    if(numbers.isEmpty() || numbers.size() == 1) {
+    if(numbers.size() <= 1) {
         return true;
     }
 
-    if(numbers[0] >= numbers[1]) {
-        for(Integer i = 0; i < numbers.size() - 1; i++) {
-            if(numbers[i] >= numbers[i + 1]) {
-                resultado = true;
-            } else {
-                return false;
-            }
+    Boolean crescente = true;
+    Boolean decrescente = true;
+
+    for(Integer i = 0; i < numbers.size() - 1; i++) {
+
+        if(numbers[i] < numbers[i + 1]) {
+            decrescente = false;
+        }
+
+        if(numbers[i] > numbers[i + 1]) {
+            crescente = false;
         }
     }
 
-    
-    if(numbers[0] < numbers[1]) {
-        for(Integer i = 0; i < numbers.size() - 1; i++) {
-            if(numbers[i + 1] > numbers[i]) {
-                resultado = true;
-            } else {
-                return false;
-            }
-        }
-    }
-    
-   
-
-    return resultado;
+    return crescente || decrescente;
+}
+  
     
     
 }
