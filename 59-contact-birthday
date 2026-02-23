@@ -7,6 +7,8 @@ public Boolean isBirthday(Contact c) {
 
     if(c.Birthdate.day() == today.day() && c.Birthdate.month() == today.month()) {
         return true;
+    } else {
+        return false;
     }
    
 }
