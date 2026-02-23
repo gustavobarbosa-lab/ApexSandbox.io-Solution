@@ -1,0 +1,12 @@
+public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
+    List<Contact> resultado = new List<Contact>();
+    resultado.add(contacts[0]);
+
+    for(Contact contatoNovo : resultado) {
+        for(Contact contato : contacts) {
+            if(!contatoNovo.Email == contato.Email) {
+                resultado.add(contato);
+            } 
+        }
+    }
+}
