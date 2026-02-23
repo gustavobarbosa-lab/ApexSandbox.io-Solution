@@ -1,14 +1,16 @@
 public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     List<Contact> resultado = new List<Contact>();
-    resultado.add(contacts[0]);
+    List<String> emails = new List<String>();
+    
+   
 
-    for(Contact contatoNovo : resultado) {
-        for(Contact contato : contacts) {
-            if(!(contatoNovo.Email == contato.Email)) {
-                resultado.add(contato);
-            } 
+    for(Contact contato : contacts) {
+        if(!emails.contains(contato.email)) {
+            emails.add(contato.email);
+            resultado.add(contato);
         }
     }
 
     return resultado;
+
 }
