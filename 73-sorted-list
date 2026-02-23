@@ -1,5 +1,5 @@
 public boolean isSorted(List<Integer> numbers) {
-    Boolean resultado = false;
+    Boolean resultado = true;
     Integer numeroAnterior = 0;
 
     if(numbers.isEmpty() || numbers.size() == 1) {
