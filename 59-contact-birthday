@@ -5,6 +5,8 @@ public Boolean isBirthday(Contact c) {
 
     Date today = System.today();
 
-    return c.Birthdate.day() == today.day() &&
-           c.Birthdate.month() == today.month();
+    if(c.Birthdate.day() == today.day() && c.Birthdate.month() == today.month()) {
+        return true;
+    }
+   
 }
