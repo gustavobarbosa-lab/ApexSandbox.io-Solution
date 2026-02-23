@@ -1,25 +1,38 @@
 public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     List<Contact> resultado = new List<Contact>();
-    Set<String> emails = new List<String>();
-
-    if(contacts == null) {
-        return new List<Contact>();
-    }
-    if(contacts.isEmpty()) {
-        return new List<Contact>();
+    
+    if (contacts == null || contacts.isEmpty()) {
+        return resultado;
     }
     
-    for(Contact contato : contacts) {
-        if(contato.email == '') {
-            contato.email = null;
+    Set<String> emailsVistos = new Set<String>();
+    Boolean nullJaAdicionado = false;
+    
+    for (Contact contato : contacts) {
+        
+        String emailNormalizado;
+        
+        // Normalização
+        if (String.isBlank(contato.Email)) {
+            emailNormalizado = null;
+        } else {
+            emailNormalizado = contato.Email.toLowerCase();
         }
-       
-        if(!emails.contains(contato.email.toLowerCase())) {
-            emails.add(contato.email.toLowerCase());
+        
+        // Controle de null
+        if (emailNormalizado == null) {
+            if (!nullJaAdicionado) {
+                resultado.add(contato);
+                nullJaAdicionado = true;
+            }
+        }
+        // Controle de emails válidos
+        else if (!emailsVistos.contains(emailNormalizado)) {
+            emailsVistos.add(emailNormalizado);
             resultado.add(contato);
         }
     }
-
+    
     return resultado;
 
 }
