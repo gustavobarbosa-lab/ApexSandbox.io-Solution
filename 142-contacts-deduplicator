@@ -9,7 +9,7 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
    
 
     for(Contact contato : contacts) {
-        if(contato.email != null) {
+        if(contato.email != null && contato.email.isEmpty()) {
             if(!emails.contains(contato.email.toLowerCase())) {
                 emails.add(contato.email.toLowerCase());
                 resultado.add(contato);
