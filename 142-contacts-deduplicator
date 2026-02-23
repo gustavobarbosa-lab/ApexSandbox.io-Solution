@@ -10,8 +10,8 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
 
     for(Contact contato : contacts) {
         if(contato.email != null) {
-            if(!emails.contains(contato.email)) {
-                emails.add(contato.email);
+            if(!emails.contains(contato.email.toLowerCase())) {
+                emails.add(contato.email.toLowerCase());
                 resultado.add(contato);
             }
         }
