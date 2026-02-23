@@ -1,5 +1,7 @@
 public Set<Id> accountIds(List<Opportunity> opps) {
-    
+    if(opps.AccountId == '') {
+        return new Set<Id>();
+    }
 
     Set<Id> ids = new Set<Id>();
 
