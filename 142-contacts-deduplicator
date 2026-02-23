@@ -1,6 +1,6 @@
 public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
     List<Contact> resultado = new List<Contact>();
-    List<String> emails = new List<String>();
+    Set<String> emails = new List<String>();
 
     if(contacts == null) {
         return new List<Contact>();
@@ -18,9 +18,6 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
             emails.add(contato.email.toLowerCase());
             resultado.add(contato);
         }
-    
-
-        
     }
 
     return resultado;
