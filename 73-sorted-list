@@ -1,6 +1,5 @@
 public boolean isSorted(List<Integer> numbers) {
 
-    public boolean isSorted(List<Integer> numbers) {
     if(numbers.isEmpty() || numbers.size() == 1) {
         return true;
     }
@@ -42,6 +41,4 @@ public boolean isSorted(List<Integer> numbers) {
     }
     
     return true;
-
-
 }
