@@ -2,6 +2,10 @@ public boolean isSorted(List<Integer> numbers) {
     Boolean resultado = false;
     Integer numeroAnterior = 0;
 
+    if(numbers.isEmpty()) {
+        return true;
+    }
+
     if(numbers[0] > numbers[1]) {
         for(Integer i = 0; i < numbers.size() - 1; i++) {
             if(numbers[i] > numbers[i + 1]) {
