@@ -1,32 +1,43 @@
 public boolean isSorted(List<Integer> numbers) {
-    Boolean resultado = false;
-    Integer numeroAnterior = 0;
 
-    if(numbers.isEmpty() || numbers.size() == 1) {
+    if(numbers == null || numbers.isEmpty() || numbers.size() == 1) {
         return true;
     }
-
-    if(numbers[0] >= numbers[1]) {
-        for(Integer i = 0; i < numbers.size() - 1; i++) {
-            if(numbers[i] >= numbers[i + 1]) {
-                resultado = true;
-            } else {
+    
+    // Encontrar o primeiro par que não seja igual para determinar a direção
+    Integer direcao = 0; // 0 = indefinido, 1 = crescente, -1 = decrescente
+    
+    for(Integer i = 0; i < numbers.size() - 1; i++) {
+        if(numbers.get(i) < numbers.get(i + 1)) {
+            direcao = 1; // crescente
+            break;
+        } else if(numbers.get(i) > numbers.get(i + 1)) {
+            direcao = -1; // decrescente
+            break;
+        }
+        // se for igual, continua procurando
+    }
+    
+    // Se todos elementos são iguais
+    if(direcao == 0) {
+        return true;
+    }
+    
+    // Verificar se toda a lista segue a direção encontrada
+    for(Integer i = 0; i < numbers.size() - 1; i++) {
+        if(direcao == 1) {
+            // crescente: elemento atual não pode ser maior que o próximo
+            if(numbers.get(i) > numbers.get(i + 1)) {
+                return false;
+            }
+        } else {
+            // decrescente: elemento atual não pode ser menor que o próximo
+            if(numbers.get(i) < numbers.get(i + 1)) {
                 return false;
             }
         }
     }
+    
+    return true;
 
-    
-   
-    if(numbers[0] < numbers[1]) {
-        for(Integer i = 0; i < numbers.size() - 1; i++) {
-            if(numbers[i + 1] > numbers[i]) {
-                resultado = true;
-            } else {
-                return false;
-            }
-        }
-    }
-    
-    return resultado;
 }
