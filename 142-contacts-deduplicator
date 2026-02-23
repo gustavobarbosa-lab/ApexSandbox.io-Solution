@@ -13,12 +13,12 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
         if(contato.email == '') {
             contato.email = null;
         }
-        else if(contato.email != null) {
-            if(!emails.contains(contato.email.toLowerCase())) {
-                emails.add(contato.email.toLowerCase());
-                resultado.add(contato);
-            }
+       
+        if(!emails.contains(contato.email.toLowerCase())) {
+            emails.add(contato.email.toLowerCase());
+            resultado.add(contato);
         }
+    
 
         
     }
