@@ -1,8 +1,7 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
     Set<Integer> set1 = new Set<Integer>();
     Set<Integer> set2 = new Set<Integer>();
-    Boolean resultado = true;
-
+ 
     set1.addAll(nums1);
     set2.addAll(nums2);
 
@@ -18,6 +17,6 @@ public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
         }
     }
 
-    return resultado;
+    return true;
 
 }
