@@ -4,7 +4,7 @@ public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
 
     for(Contact contatoNovo : resultado) {
         for(Contact contato : contacts) {
-            if(!contatoNovo.Email == contato.Email) {
+            if(!(contatoNovo.Email == contato.Email)) {
                 resultado.add(contato);
             } 
         }
