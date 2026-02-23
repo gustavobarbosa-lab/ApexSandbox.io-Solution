@@ -7,7 +7,7 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
 
     for(Account conta : accounts) {
         if(conta.Industry != null ) {
-           Decimal Revenue = (conta.AnnualRevenue == null ? 0 : conta.AnnualRevenue)  
+           Decimal Revenue = (conta.AnnualRevenue == null ? 0 : conta.AnnualRevenue); 
 
            Decimal atual = resultado.get(conta.Industry);
 
