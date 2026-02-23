@@ -1,4 +1,8 @@
 public Set<Id> accountIds(List<Opportunity> opps) {
+    if(opps.isEmpty()) {
+        return new Set<Id>();
+    }
+
     Set<Id> ids = new Set<Id>();
 
     for(Opportunity oportunidade : opps) {
