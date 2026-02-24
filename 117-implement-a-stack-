@@ -6,7 +6,11 @@ public class Stack {
     }
     
     public Object pop() {
-        return pilha.remove(0);
+        if(!pilha.isEmpty()) {
+            return pilha.remove(0);
+        } else {
+            return null;
+        }
     }
     
     public Integer size() {
@@ -18,7 +22,6 @@ public class Stack {
     }
     
     public Boolean isEmpty() {
-
         return pilha.isEmpty();
     }
 }
