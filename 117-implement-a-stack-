@@ -21,7 +21,7 @@ public class Stack {
         if (pilha.size() == 0) {
             return null;
         }
-        return pilha.get(pilha.size() - 1)
+        return pilha.get(pilha.size() - 1);
     }
     
     public Boolean isEmpty() {
