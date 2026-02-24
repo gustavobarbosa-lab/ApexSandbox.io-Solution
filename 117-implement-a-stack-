@@ -6,7 +6,7 @@ public class Stack {
     }
     
     public Object pop() {
-        
+        return pilha.remove(0);
     }
     
     public Integer size() {
