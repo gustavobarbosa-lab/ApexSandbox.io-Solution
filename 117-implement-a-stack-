@@ -18,6 +18,6 @@ public class Stack {
     }
     
     public Boolean isEmpty() {
-        
+        return pilha.size() > 0;
     }
 }
