@@ -1,0 +1,40 @@
+public Boolean duplicateContacts(Contact c1, Contact c2) {
+    Boolean emailIgual = false; 
+    Boolean telefoneIgual = false;
+
+
+    if(c1.Email != null && c2.Email != null){
+        if(c1.Email == c2.Email){
+            emailIgual = true;
+        }
+    }
+        
+    if(c1.Phone != null && c2.Phone != null){
+        if(c1.Phone == c2.Phone){
+            telefoneIgual = true;
+        }
+    }
+
+    if(emailIgual) {
+        return true;
+    }
+
+    if(telefoneIgual) {
+        return true;
+    }
+
+    return false;
+    
+
+    
+    
+
+    
+    
+    
+ 
+    
+
+    
+
+}
