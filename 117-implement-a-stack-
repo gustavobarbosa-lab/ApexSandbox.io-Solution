@@ -18,9 +18,6 @@ public class Stack {
     }
     
     public Object peek(){
-        if (pilha.size() == 0) {
-            return null;
-        }
         return pilha.get(pilha.size() - 1);
     }
     
