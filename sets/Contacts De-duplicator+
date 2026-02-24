@@ -1,0 +1,34 @@
+public static List<Contact> ContactDeduplicator(List<Contact> contacts) {
+    List<Contact> resultado = new List<Contact>();
+    
+    if (contacts == null || contacts.isEmpty()) {
+        return resultado;
+    }
+    
+    Set<String> emailsVistos = new Set<String>();
+    Boolean nullJaAdicionado = false;
+
+    for (Contact contato : contacts) {
+        String emailNormalizado;
+        
+        if (String.isBlank(contato.Email)) {
+            emailNormalizado = null;
+        } else {
+            emailNormalizado = contato.Email.toLowerCase();
+        }
+        
+        if (emailNormalizado == null) {
+            if (!nullJaAdicionado) {
+                resultado.add(contato);
+                nullJaAdicionado = true;
+            }
+        }
+  
+        else if (!emailsVistos.contains(emailNormalizado)) {
+            emailsVistos.add(emailNormalizado);
+            resultado.add(contato);
+        }
+    }
+    
+    return resultado;
+}
