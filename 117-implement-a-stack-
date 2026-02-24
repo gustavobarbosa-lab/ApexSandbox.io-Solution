@@ -19,7 +19,7 @@ public class Stack {
     }
     
     public Boolean isEmpty() {
-        Boolean resultado = piha.isEmpty();
+        Boolean resultado = pilha.isEmpty();
 
         return resultado;
     }
