@@ -2,26 +2,33 @@ public class Stack {
     List<Object> pilha = new List<Object>();
     
     public void push(Object obj) {
-        pilha.add(0, obj);
+        pilha.add(obj);
     }
     
+    // Remove e retorna o último elemento (topo da pilha)
     public Object pop() {
-        if(!pilha.isEmpty()) {
-            return pilha.remove(0);
-        } else {
+        if (pilha.isEmpty()) {
             return null;
         }
+        return pilha.remove(pilha.size() - 1);
     }
     
+    // Retorna a quantidade de elementos
     public Integer size() {
         return pilha.size();
     }
     
-    public Object peek(){
+    // Retorna o último elemento sem remover (topo da pilha)
+    public Object peek() {
+        if (pilha.isEmpty()) {
+            return null;
+        }
         return pilha.get(pilha.size() - 1);
     }
     
+   
     public Boolean isEmpty() {
-        return pilha.size() == 0;
+        return pilha.isEmpty();
     }
+    
 }
