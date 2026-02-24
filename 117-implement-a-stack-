@@ -24,7 +24,7 @@ public class Stack {
     }
     
     public Boolean isEmpty() {
-                
-        return pilha.isEmpty();
+        Boolean resultado = pilha.size() > 0
+        return resultado;
     }
 }
