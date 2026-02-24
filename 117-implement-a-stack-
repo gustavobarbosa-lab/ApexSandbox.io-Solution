@@ -5,7 +5,6 @@ public class Stack {
         pilha.add(obj);
     }
     
-    // Remove e retorna o último elemento (topo da pilha)
     public Object pop() {
         if (pilha.isEmpty()) {
             return null;
@@ -13,12 +12,10 @@ public class Stack {
         return pilha.remove(pilha.size() - 1);
     }
     
-    // Retorna a quantidade de elementos
     public Integer size() {
         return pilha.size();
     }
     
-    // Retorna o último elemento sem remover (topo da pilha)
     public Object peek() {
         if (pilha.isEmpty()) {
             return null;
@@ -26,9 +23,7 @@ public class Stack {
         return pilha.get(pilha.size() - 1);
     }
     
-   
     public Boolean isEmpty() {
         return pilha.isEmpty();
     }
-    
 }
