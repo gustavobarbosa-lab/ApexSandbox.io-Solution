@@ -14,7 +14,7 @@ public class Stack {
     }
     
     public Object peek(){
-        
+        return pilha.get(0);
     }
     
     public Boolean isEmpty() {
