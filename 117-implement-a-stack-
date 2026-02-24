@@ -10,7 +10,7 @@ public class Stack {
     }
     
     public Integer size() {
-        
+        return pilha.size();
     }
     
     public Object peek(){
