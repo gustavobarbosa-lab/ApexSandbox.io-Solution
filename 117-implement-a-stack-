@@ -6,8 +6,10 @@ public class Stack {
     }
     
     public Object pop() {
-        Object resultado = pilha.remove(0);
-        return resultado;
+        if (isEmpty()) {
+            return null;
+        }
+        return pilha.remove(0);
     }
     
     public Integer size() {
