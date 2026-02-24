@@ -13,14 +13,5 @@ public class Stack {
         return pilha.size();
     }
     
-    public Object peek(){
-        Object resultado = pilha.get(0);
-        return resultado;
-    }
     
-    public Boolean isEmpty() {
-        Boolean resultado = pilha.isEmpty();
-
-        return resultado;
-    }
 }
