@@ -2,7 +2,7 @@ public class Stack {
     List<Object> pilha = new List<Object>();
     
     public void push(Object obj) {
-        obj.add(0, pilha);
+        pilha.add(0, obj);
     }
     
     public Object pop() {
