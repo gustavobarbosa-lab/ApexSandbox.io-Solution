@@ -6,25 +6,18 @@ public class Stack {
     }
     
     public Object pop() {
-        if (isEmpty()) {
-            return null;
-        }
-        return pilha.remove(0);
+        
     }
     
     public Integer size() {
-        return pilha.size();
+        
     }
     
     public Object peek(){
-        if (isEmpty()) {
-            return null;
-        }
-        return pilha.get(0);
+        
     }
     
     public Boolean isEmpty() {
-        Boolean resultado = pilha.size() > 0;
-        return resultado;
+        
     }
 }
