@@ -15,5 +15,3 @@ public String whichTwo(Integer a, Integer b, Integer c) {
     return resultado;
 }
 
-
-trailhead.salesforce.com/pt-BR/users/matcaampos/trailmixes/conceitos-basicos-de-crm-salesforce
