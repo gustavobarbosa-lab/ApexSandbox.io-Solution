@@ -6,7 +6,7 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     }
 
     for(case caseItem : cases) {
-        
+        if(caseItem != null && caseItem.Type != null) {
             if(resultado.containsKey(caseItem.Type)) {
                 List<Case> valorAtual = resultado.get(caseItem.Type);
                 valorAtual.add(caseItem); 
@@ -16,7 +16,7 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
                 novaLista.add(caseItem);
                 resultado.put(caseItem.Type, novaLista);
             }
-        
+        }
     }
     return resultado;
 }
