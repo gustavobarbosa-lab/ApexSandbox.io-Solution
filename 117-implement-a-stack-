@@ -18,5 +18,7 @@ public class Stack {
         return resultado;
     }
     
-    
+    public Boolean isEmpty() {
+        return (pilha.isEmpty());
+    }
 }
